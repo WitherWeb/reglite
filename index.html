@@ -101,6 +101,44 @@
                   <h1>Оставьте номер — скажем, возможен ли выкуп</h1>
                   <p>Свяжемся с вами в течение 5 минут</p>
                 </div>
+
+                <form class="lead-form" id="leadForm" novalidate>
+                  <input type="hidden" name="situation" id="selectedSituation" />
+
+                  <label class="lead-form__label" for="phone">Телефон <span>*</span></label>
+                  <div class="phone-field">
+                    <span class="phone-field__flag" aria-hidden="true"></span>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      inputmode="tel"
+                      autocomplete="tel"
+                      placeholder="+7 (___) ___-__-__"
+                      aria-describedby="phoneMessage"
+                      autofocus
+                      required
+                    />
+                  </div>
+                  <p class="lead-form__message" id="phoneMessage" role="status"></p>
+
+                  <button class="lead-form__button" type="submit">
+                    Узнать сумму сейчас
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14" />
+                      <path d="m13 6 6 6-6 6" />
+                    </svg>
+                  </button>
+
+                  <p class="lead-form__secure">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <rect x="5" y="10" width="14" height="10" rx="2" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                      <path d="M12 14v2" />
+                    </svg>
+                    Ваши данные защищены
+                  </p>
+                </form>
               </div>
             </section>
           </div>
