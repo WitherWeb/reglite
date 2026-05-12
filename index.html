@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Реглайт — мини-захват</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="capture" id="capture">
+        <div class="container capture__inner">
+          <div class="capture__progress" aria-live="polite">
+            <p class="capture__step" id="stepText">Шаг 1 из 2</p>
+            <div class="progress" aria-hidden="true">
+              <span class="progress__bar" id="progressBar"></span>
+            </div>
+          </div>
+
+          <div class="capture__viewport" id="captureViewport">
+            <section class="capture-screen is-active" data-screen="situation">
+              <div class="container">
+                <div class="capture__header">
+                  <h1>Какая у вас ситуация?</h1>
+                  <p>Выберите вариант — скажем, возможен ли выкуп</p>
+                </div>
+
+                <div class="answer-grid" role="radiogroup" aria-label="Какая у вас ситуация?">
+                  <button class="answer-card answer-card--featured" type="button" role="radio" aria-checked="false" data-answer="Срочно нужны деньги">
+                    <span class="answer-card__badge">
+                      <svg viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                        <path d="m10 2 2.3 4.7 5.2.8-3.8 3.7.9 5.2L10 14l-4.6 2.4.9-5.2-3.8-3.7 5.2-.8L10 2Z" />
+                      </svg>
+                      Чаще всего
+                    </span>
+                    <span class="answer-card__icon" aria-hidden="true">
+                      <img src="./icons/ChatGPT_Image_11_2026_15_53_44.png" alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <span class="answer-card__text">Срочно <br> нужны деньги</span>
+                  </button>
+
+                    <button class="answer-card" type="button" role="radio" aria-checked="false" data-answer="Просрочка по ипотеке">
+                    <span class="answer-card__icon" aria-hidden="true">
+                      <img src="./icons/ChatGPT_Image_11_2026_16_27_26.png" alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <span class="answer-card__text">Просрочка <br> по ипотеке</span>
+                  </button>
+
+                  <button class="answer-card" type="button" role="radio" aria-checked="false" data-answer="Долги и кредиты">
+                    <span class="answer-card__icon" aria-hidden="true">
+                      <img src="./icons/ChatGPT_Image_11_2026_16_29_38.png" alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <span class="answer-card__text">Долги и <br> кредиты</span>
+                  </button>
+
+            
+                  <button class="answer-card" type="button" role="radio" aria-checked="false" data-answer="Арест / запрет">
+                    <span class="answer-card__icon" aria-hidden="true">
+                      <img src="./icons/ChatGPT_Image_11_2026_16_29_38.png" alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <span class="answer-card__text">Арест / <br> запрет</span>
+                  </button>
+
+                
+
+                  <button class="answer-card" type="button" role="radio" aria-checked="false" data-answer="Долги по ЖКХ">
+                    <span class="answer-card__icon" aria-hidden="true">
+                      <img src="./icons/ChatGPT_Image_11_2026_16_31_59.png" alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <span class="answer-card__text">Долги <br> по ЖКХ</span>
+                  </button>
+
+                  <button class="answer-card" type="button" role="radio" aria-checked="false" data-answer="Другое">
+                    <span class="answer-card__icon" aria-hidden="true">
+                      <img src="./icons/ChatGPT_Image_11_2026_16_47_31.png" alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <span class="answer-card__text">Другое</span>
+                  </button>
+                </div>
+
+                <p class="capture__note">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="13" r="8" />
+                    <path d="M12 8v5l3 2" />
+                    <path d="M9 2h6" />
+                  </svg>
+                  Ответим в течение 5 минут
+                </p>
+              </div>
+            </section>
+
+            <section class="capture-screen" data-screen="phone" hidden>
+              <div class="container">
+                <div class="capture__header capture__header--form">
+                  <h1>Оставьте номер — скажем, возможен ли выкуп</h1>
+                  <p>Свяжемся с вами в течение 5 минут</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
